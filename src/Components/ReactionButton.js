@@ -28,7 +28,7 @@ Quote from a project made by Arpan(twitter: @webdev_arpan)`;
   
 
 /*Below creating a notify carble and assinging the toast meassge to it */ 
- const notify = () => toast.success((<p style={{ fontFamily: 'serif' }}>Quote copied</p>), {
+ const notify = () => toast((<p>Quote copied</p>), {
       position: "top-center",
       autoClose: 1800,
       hideProgressBar: false,
@@ -37,7 +37,12 @@ Quote from a project made by Arpan(twitter: @webdev_arpan)`;
       draggable: true,
       icon: "✍",
       className: 'toastmessage',
-    
+      style:{
+        backgroundColor:"#FFF",
+        color:"#000",
+        fontFamily: "serif",
+        padding:"10px"
+      }
       }); 
 /*above creating a notify carble and assinging the toast meassge to it */ 
 

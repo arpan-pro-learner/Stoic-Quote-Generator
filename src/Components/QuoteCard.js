@@ -8,7 +8,7 @@ import { Avatar } from "@mui/material";
 import ButtonAppBar from "./AppBar";
 
 import NewQuoteBtn from "./NewQuoteBtn";
-
+import Footer from "./Footer";
 
 import "../assets/fontfamily.css";
 import ReactionButton from "./ReactionButton";
@@ -131,6 +131,7 @@ export default function QuoteCard() {
           </Box>
       
       </Container>
+      <Footer/>
     </div>
   );
 }
