@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <div>
       <footer>
-        <div className="">
+        <div >
           <p className="copyright">
             Project made by Arpan with code and '💖' for{" "}
            <a
