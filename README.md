@@ -13,7 +13,7 @@ i wanted to make a ***small project on my own to test my knowledge***
 
 > Here is a ScreenShot of the project on desktop 
 
-![alt text](../stoic_quote_genrator/src/assets/projectSS/Stoic%20Quote's.png)
+![alt text](./src/assets/projectSS/Stoic%20Quote's.png)
 
 
 ### If you liked what i am doing here 
