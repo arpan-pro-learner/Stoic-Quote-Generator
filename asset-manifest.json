@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Stoic-Quote-Generator/static/css/main.6c794d2c.css",
+    "main.js": "/Stoic-Quote-Generator/static/js/main.fd667092.js",
+    "static/js/787.5643a34f.chunk.js": "/Stoic-Quote-Generator/static/js/787.5643a34f.chunk.js",
+    "index.html": "/Stoic-Quote-Generator/index.html",
+    "main.6c794d2c.css.map": "/Stoic-Quote-Generator/static/css/main.6c794d2c.css.map",
+    "main.fd667092.js.map": "/Stoic-Quote-Generator/static/js/main.fd667092.js.map",
+    "787.5643a34f.chunk.js.map": "/Stoic-Quote-Generator/static/js/787.5643a34f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c794d2c.css",
+    "static/js/main.fd667092.js"
+  ]
+}
