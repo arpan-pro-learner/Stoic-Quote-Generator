@@ -1,6 +1,6 @@
 # Stoic Quote Generator 
 
- **See this project in Action Here 🚀:**  
+ **See this project in Action Here 🚀:** https://arpan-pro-learner.github.io/Stoic-Quote-Generator/ 
 
 > This project is made by [Arpan](https://www.instagram.com/theselftaught.dev/) using react and material UI
 
