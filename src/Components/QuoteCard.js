@@ -27,30 +27,44 @@ const Seneca = "https://miro.medium.com/max/1180/1*MwSpbm9U7TQhpyJS8VnT9w.jpeg";
 
 // images links of pilosphers
 
-const randomStoicQuoteUrl = "https://stoic-server.herokuapp.com/random";
+const randomStoicQuoteUrl = "https://stoic-quotes.com/api/quote";
 
 export default function QuoteCard() {
   const [randomQuote, setRandomQuote] = useState("");
 
-  useEffect(() => {
-    axios.get(randomStoicQuoteUrl).then((response) => {
-      console.log(response.data);
+  // useEffect(() => {
+  //   axios.get(randomStoicQuoteUrl).then((response) => {
+  //     console.log(response.data);
+  //     setRandomQuote(response.data);
+  //   });
+  // }, []);
+  const getNewQuote = async () => {
+    try {
+      const response = await axios.get(randomStoicQuoteUrl);
       setRandomQuote(response.data);
-    });
+      return Promise.resolve();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getNewQuote();
   }, []);
 
   if (!randomQuote) return null;
 
+
   //assiging values to variables so it can be copied on click with copy to clipboard button
 
-  let Quote = randomQuote[0].body;
-  let QuoteAuthor = randomQuote[0].author;
-  let Quotesource = randomQuote[0].quotesource;
+  let Quote = randomQuote.text;
+  let QuoteAuthor = randomQuote.author;
+  // let Quotesource = randomQuote[0].quotesource;
 
   // assiging values to variables so it can be copied on click with copy to clipboard button
 
   // assigning images to author aoutes
-  let author = randomQuote[0].author;
+  let author = randomQuote.author;
 
   if (author === "Epictetus") {
     author = Epictetus;
@@ -78,7 +92,7 @@ export default function QuoteCard() {
               }}
             >
               <Box sx={{ fontWeight: "700", fontSize: "1.5rem" }}>
-                {randomQuote[0].body}
+                {randomQuote.text}
               </Box>
 
               <Avatar
@@ -95,26 +109,20 @@ export default function QuoteCard() {
               />
               <Box
                 sx={{
-                  fontWeight: "700",
-                  margin: "1.5rem 0 0 ",
+                  fontSize:'1.2rem',
+                  fontWeight: "800",
+                  margin: "2.5rem 0 0 ",
                 }}
               >
-                {randomQuote[0].author}
+                {randomQuote.author}
               </Box>
 
-              <Box
-                sx={{
-                  fontWeight: "400",
-                }}
-              >
-                {randomQuote[0].quotesource}
-              </Box>
+         
             </Typography>
             <Divider variant="middle" />
             <ReactionButton
               Quote={Quote}
               QuoteAuthor={QuoteAuthor}
-              Quotesource={Quotesource}
             />
           </Card>
         </Box>
@@ -127,8 +135,8 @@ export default function QuoteCard() {
             }}
            
           >
-           <NewQuoteBtn/>
-          </Box>
+           <NewQuoteBtn  onClick={getNewQuote}/>
+          </Box >
       
       </Container>
       <Footer/>

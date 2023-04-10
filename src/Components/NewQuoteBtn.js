@@ -4,9 +4,17 @@ import "../assets/ButtonStyles.css";
 
 import "../assets/fontfamily.css";
 
+
+
 const Font = "'Fondamento', cursive";
   
-export default function NewQuoteBtn() {
+
+
+
+
+
+export default function NewQuoteBtn(props) {
+  const { onClick } = props;
 
 
   return (
@@ -29,7 +37,7 @@ export default function NewQuoteBtn() {
           transform: 'translate(0.05em, 0.05em)',
           boxshadow: '0.05em 0.05em',
         }
-      }} onClick={() => window.location.reload()}>
+      }}  onClick={onClick}>
         New Quote
       </Button>
     </div>
