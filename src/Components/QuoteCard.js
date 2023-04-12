@@ -8,7 +8,7 @@ import { Avatar } from "@mui/material";
 import ButtonAppBar from "./AppBar";
 
 import NewQuoteBtn from "./NewQuoteBtn";
-import FooterDetails from "./footer";
+import FooterDetails from "./Footer";
 
 import "../assets/fontfamily.css";
 import ReactionButton from "./ReactionButton";
